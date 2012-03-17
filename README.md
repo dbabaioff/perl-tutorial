@@ -52,7 +52,7 @@ $_ = 0 for my ($x, $y, $z);
 
 ### Lists
 Perl automatically flattens lists - Perl removes all the parentheses apart from the
-outermost pair. There�s no difference at all between any of these three lists:
+outermost pair. There's no difference at all between any of these three lists:
 
 ```perl
 (3, 8, 5, 15)
@@ -61,7 +61,7 @@ outermost pair. There�s no difference at all between any of these three lists:
 ```
 
 ##### List slices
-Inside the square brackets we don�t need the additional set of parentheses.
+Inside the square brackets we don't need the additional set of parentheses.
 
 ```perl
 (19, 68, 47, 60, 53, 51, 58, 55, 47)[4, 5, 6] # <==> (19, 68, 47, 60, 53, 51, 58, 55, 47)[(4, 5, 6)]
@@ -162,11 +162,11 @@ print "list context: ", join("|", @data), "\n"; # list context: age|39|city|Chic
 
 # hash in scalar context
 my $scalar = %person;
-#  Therefore, this hash in scalar context is �3/8�, which means we are
+#  Therefore, this hash in scalar context is '3/8', which means we are
 # using three buckets, or memory locations, out of eight buckets allocated. This string is not so interesting unless we notice that the string 
-# �3/8� is a true value in Perl. Also, if our hash was empty, its value in scalar context would be the empty string, "". So a hash in scalar 
-# context is normally treated as a true/false value�true if there is anything in it, false if empty.
-print "scalar context: $scalar\n"; # prints the string �scalar context: 3/8�. 
+# '3/8' is a true value in Perl. Also, if our hash was empty, its value in scalar context would be the empty string, "". So a hash in scalar 
+# context is normally treated as a true/false value - true if there is anything in it, false if empty.
+print "scalar context: $scalar\n"; # prints the string 'scalar context: 3/8'. 
 
 if (%person) {
     print "%person has at least one key/value pair\n";
