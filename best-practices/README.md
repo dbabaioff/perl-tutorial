@@ -2,26 +2,26 @@
 
 * **Semicolons:** Place a semicolon after every statement.
 
-RIGHT:
+**RIGHT:**
 
 ```perl
 while (my $line = <>) {
-  chomp $line;
-  if ($line =~ s{\A (\s*) -- (.*)}{$1#$2}xms) {
-    push @comments, $2;
-  }
-  print $line;
+    chomp $line;
+    if ($line =~ s{\A (\s*) -- (.*)}{$1#$2}xms) {
+        push @comments, $2;
+    }
+    print $line;
 ```
 
-WRONG:
+**WRONG:**
 
 ```perl
 while (my $line = <>) {
-  chomp $line;
-  if ( $line =~ s{\A (\s*) -- (.*)}{$1#$2}xms ) {
-    push @comments, $2 # no semicolons
-  }
-  print $line # no semicolons
+    chomp $line;
+    if ($line =~ s{\A (\s*) -- (.*)}{$1#$2}xms) {
+        push @comments, $2 # no semicolons
+    }
+    print $line # no semicolons
 }
 
 ```
