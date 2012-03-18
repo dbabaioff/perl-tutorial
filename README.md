@@ -602,7 +602,7 @@ Three different ways for a Perl program to import a module and call that moduleï
 **do** will look for a file by searching the @INC path. If the file canï¿½t be found, it will silently move on. If it is found, it will run the file just as if it was placed in a block within your main program.
 
 ##### require
-**require** is like **do**, but itï¿½ll only do it once. Itï¿½ll record the fact that a file has been loaded, and will henceforth ignore further requests to require it again.
+**require** is like **do**, but it'll only do it once. Itï¿½ll record the fact that a file has been loaded, and will henceforth ignore further requests to require it again.
 
 ##### use
 It's like **require**, except that Perl applies it before anything else in the program starts ï¿½ if Perl sees a **use** statement anywhere in your program, itï¿½ll include that module (compiled-time).
