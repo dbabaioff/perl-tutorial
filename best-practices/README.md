@@ -19,9 +19,9 @@ WRONG:
 while (my $line = <>) {
   chomp $line;
   if ( $line =~ s{\A (\s*) -- (.*)}{$1#$2}xms ) {
-    push @comments, $2
+    push @comments, $2 # no semicolons
   }
-  print $line
+  print $line # no semicolons
 }
 
 ```
