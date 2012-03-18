@@ -101,6 +101,13 @@ print scalar @array; #or print scalar(@array);
 Note: This syntax return the last index of the array, not its last value. The last value of @a can be accessed by indexing with $#a into 
 @a with the syntax $a[$#a].
 
+[OR]
+
+Another way to access the end of an array is to use a negative index.
+```perl
+print $array[-1]; # also prints value of last element
+```
+
 ##### swap two array elements
 ```perl
 @months[3, 4] = @months[4, 3];
