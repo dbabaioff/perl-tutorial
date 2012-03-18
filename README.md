@@ -259,7 +259,7 @@ sub example_subroutine {
 
 ##### Arguments
 
-**Function arguments are passed in through one of Perlï¿½s special variables, the array @_.**
+**Function arguments are passed in through one of Perl's special variables, the array @_.**
 
 ```perl
 total(111, 107, 105, 114, 69);
@@ -307,7 +307,7 @@ sub test {
 }
 ```
 
-**[!!!] Itï¿½s important to know that in Perl, arguments are passed into functions by reference, not by value**
+**[!!!] It's important to know that in Perl, arguments are passed into functions by reference, not by value**
 
 ```perl
 my $var = 10; 
@@ -404,7 +404,7 @@ chop($string);                 # $string is now "testing 1, 2, "
 ```
 
 ## Control Flow
-**Note: the curly braces ï¿½ { ï¿½ } ï¿½ around the body (the statements) are required. (Even if the body is one line of code).**
+**Note: the curly braces {  } around the body (the statements) are required. (Even if the body is one line of code).**
 
 * if ... elsif ... else 
 * unless ==> another way of saying if (not $a) - If this is not true, then { ... } OR Unless this is true, then { ... }.
@@ -442,7 +442,7 @@ foreach (@array)
 ```
 
 ##### Expression Modifier for the foreach Loop
-Using this syntax you donï¿½t get to choose your own iterator variable: itï¿½s always **$_**.
+Using this syntax you don't get to choose your own iterator variable: it's always **$_**.
 
 ```perl
 my @array = qw(John Paul George Ringo); 
@@ -469,7 +469,7 @@ my @refs = (\$var1, \$var2, \$var3);
 ```
 
 ##### Using Reference
-To **dereference** data, put the reference in curly braces wherever you would normally use a variableï¿½s name.
+To **dereference** data, put the reference in curly braces wherever you would normally use a variable's name.
 
 ```perl
 my @array   = (1, 2, 3, 4, 5); 
@@ -552,7 +552,7 @@ my $ref;
 $ref->{UK}->{England}->{Oxford}->[1999]->{Population} = 500000;
 ```
 
-Perl will automatically know that we need $ref to be a hash reference. So, itï¿½ll make us a nice new anonymous hash: 
+Perl will automatically know that we need $ref to be a hash reference. So, it'll make us a nice new anonymous hash: 
 
 ```perl
 $ref = {}; 
@@ -574,7 +574,7 @@ $array[0][0] = 'test';
 A **library** is a just a file of code.
 A module is a collection of related functions and variables that can be used by any program (and has a **package** in it).
 
-* Put the source code into a file named modulename.pm (pm stands for ï¿½Perl moduleï¿½). 
+* Put the source code into a file named modulename.pm (pm stands for 'Perl module'). 
 * Make the module a package, or namespace, by placing the line of code **package Logger**; at the top of the file. 
 * Define variables and function in the file. 
 * Have the file return a true value by ending in 1;
@@ -590,7 +590,7 @@ file, but for backward compatibility and historical reasons, programmers still p
 * Files included with require are only loaded at run time, whereas packages loaded with use are subject to earlier compile-time checks.
 
 ##### Including Other Files
-Three different ways for a Perl program to import a module and call that moduleï¿½s functions. **do, require, and use**.
+Three different ways for a Perl program to import a module and call that module's functions. **do, require, and use**.
 
 * **use** - evaluated at compile time.
 * **require** - evaluated at run time.
@@ -599,13 +599,13 @@ Three different ways for a Perl program to import a module and call that moduleï
 * **require** Foo will check if Foo has already been loaded, whereas **do** Foo will unconditionally reload Foo.
 
 ##### do
-**do** will look for a file by searching the @INC path. If the file canï¿½t be found, it will silently move on. If it is found, it will run the file just as if it was placed in a block within your main program.
+**do** will look for a file by searching the @INC path. If the file can't be found, it will silently move on. If it is found, it will run the file just as if it was placed in a block within your main program.
 
 ##### require
-**require** is like **do**, but it'll only do it once. Itï¿½ll record the fact that a file has been loaded, and will henceforth ignore further requests to require it again.
+**require** is like **do**, but it'll only do it once. It'll record the fact that a file has been loaded, and will henceforth ignore further requests to require it again.
 
 ##### use
-It's like **require**, except that Perl applies it before anything else in the program starts ï¿½ if Perl sees a **use** statement anywhere in your program, itï¿½ll include that module (compiled-time).
+It's like **require**, except that Perl applies it before anything else in the program starts - if Perl sees a **use** statement anywhere in your program, itï¿½ll include that module (compiled-time).
 
 ```perl
 # these two calls are equivalent:
