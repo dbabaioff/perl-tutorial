@@ -369,6 +369,8 @@ sub logon {
 }
 ```
 
+## Built-in Functions
+
 ### q/qq/qw operators
 * q/qq functions - can use {}, [], (), and <> as left and right delimiters and others...
 * q - quotes
@@ -426,7 +428,7 @@ chop($string);                 # $string is now "testing 1, 2, "
 * do { action } until ( condition ); 
 * [statement] until condition - Example: print "You entered: $_" while (<STDIN>); - There is no need for parentheses around the condition, and there are no curly braces around the statement.
 
-## foreach
+## for/ foreach (for === foreach)
 **Syntax:**
 foreach scalar_variable ( list_or_array ) { 
     body 
