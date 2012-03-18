@@ -209,6 +209,15 @@ if (exists $where{'Gary'}) # exists() returns 1 when true, an empty string when 
 }
 ```
 
+##### Slicing a hash
+```perl
+print ($sound{cat}, $sound{goldfish}, $sound{dog}, $sound{dolphin});
+
+print @sound{'cat', 'goldfish', 'dog', 'dolphin'};
+
+@sound{'mouse', 'bird'} = ('arriba!', 'itortitawapuddytat');
+```
+
 ### Subroutines/Functions
 ```perl
 sub example_subroutine {
