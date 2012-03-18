@@ -468,6 +468,15 @@ my ($var1, $var2, $var3) = (10, 20, 30);
 my @refs = (\$var1, \$var2, \$var3);
 ```
 
++----------+-------------------------------+---------------------------------+-----------------+------------------+--------------------------+
+| Variable | Instantiating the scalar      | Instantiating a reference to it | Referencing it  | Dereferencing it | Accessing an element     |
++----------+-------------------------------+---------------------------------+-----------------+------------------+--------------------------+
+| $scalar  | $scalar = "steve";            | $ref = \"steve";                | $ref = \$scalar | $$ref or ${$ref} | N/A                      |
+| @list    | @list = ("steve", "fred");    | $ref = ["steve", "fred"];       | $ref = \@list   | @{$ref}          | ${$ref}[3] or $ref->[3]  |
+| %hash    | %hash = ("name" => "steve",   | $hash = {"name" => "steve",     | $ref = \%hash   | %{$ref}          | ${$ref}{"president"} or  |
+|          |   "job" => "Troubleshooter"); |   "job" => "Troubleshooter"};   |                 |                  |   $ref->{"president"}    |
++----------+-------------------------------+---------------------------------+-----------------+------------------+--------------------------+
+
 ##### Using Reference
 To **dereference** data, put the reference in curly braces wherever you would normally use a variable's name.
 
