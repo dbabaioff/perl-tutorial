@@ -414,6 +414,26 @@ my $string = "testing 1, 2, 3";
 chop($string);                 # $string is now "testing 1, 2, "
 ```
 
+### Carp
+Carp - alternative warn and die for modules
+
+```perl
+use Carp;
+
+# warn user (from perspective of caller)
+carp "string trimmed to 80 chars";
+
+# die of errors (from perspective of caller)
+croak "We're outta here!";
+
+# die of errors with stack backtrace
+confess "not implemented";
+
+# cluck not exported by default
+use Carp qw(cluck);
+cluck "This is how we got here!";
+```
+
 ## Control Flow
 **Note: the curly braces {  } around the body (the statements) are required. (Even if the body is one line of code).**
 
