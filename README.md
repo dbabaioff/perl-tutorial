@@ -423,15 +423,15 @@ use Carp;
 # warn user (from perspective of caller)
 carp "string trimmed to 80 chars";
 
+# warn user with backtrace - (cluck not exported by default)
+use Carp qw(cluck);
+cluck "This is how we got here!";
+
 # die of errors (from perspective of caller)
 croak "We're outta here!";
 
 # die of errors with stack backtrace
 confess "not implemented";
-
-# cluck not exported by default
-use Carp qw(cluck);
-cluck "This is how we got here!";
 ```
 
 ## Control Flow
