@@ -460,6 +460,11 @@ foreach scalar_variable ( list_or_array ) {
 foreach my $i (@array)
 { 
     $i *= 2; 
+}
+
+foreach my $i (1, 2, 3)
+{ 
+    $i *= 2; 
 } 
 ```
 
